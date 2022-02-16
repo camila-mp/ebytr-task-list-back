@@ -1,8 +1,9 @@
 const { connection } = require('../connection');
+// this function is used in: createUser (service) and login (service)
 
-const findUser = async (userData) => {
+const findUser = async (data) => {
   const user = await (await connection()).collection('users')
-    .findOne({ ...userData });
+    .findOne(data);
   return user;
 };
 
