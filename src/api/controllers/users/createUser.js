@@ -10,7 +10,6 @@ module.exports = async (req, res, next) => {
     res.status(StatusCodes.OK).json(newUser);
 
   } catch (err) {
-    console.log(err); // prints error info
     err.message = 'Internal server error';
     err.code = StatusCodes.INTERNAL_SERVER_ERROR;
     next(err);
