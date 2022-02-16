@@ -9,8 +9,10 @@ module.exports = async (req, res, next) => {
     const userLogin = await loginService(email, password);
 
     if (userLogin.message) return next(userLogin);
+
+    const { _id } = userLogin;
     
-    const token = genToken({ email, password });
+    const token = genToken({ _id, email });
 
     return res.status(StatusCodes.OK).json({ token });
   } catch (err) {
