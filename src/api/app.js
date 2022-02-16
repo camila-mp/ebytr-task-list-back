@@ -1,6 +1,13 @@
-const app = require('./app');
-require('dotenv').config();
+const express = require('express');
 
-const PORT = process.env.PORT || 3001;
+const app = express();
 
-app.listen(PORT, () => console.log(`conectado na porta ${PORT}`));
+app.use(express.json());
+
+// app.use('/users', usersRouter);
+// app.use('/login', loginRouter);
+// app.use('/lists', listsRouter);
+
+app.use(errorHandler);
+
+module.exports = app;
