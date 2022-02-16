@@ -6,7 +6,7 @@ module.exports = async (req, res, next) => {
   try {
     const newUser = await createUserService(userData); //tries to create user
 
-    if (newUser.message) next(newUser); // check if error message exists, if yes, go to errorHandler
+    if (newUser.message) return next(newUser); // check if error message exists, if yes, go to errorHandler
     res.status(StatusCodes.OK).json(newUser);
 
   } catch (err) {
