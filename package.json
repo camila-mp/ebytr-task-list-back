@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/camila-mp/ebytr-task-list-back#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^16.0.0",
     "express": "^4.17.2",
     "http-status-codes": "^2.2.0",
