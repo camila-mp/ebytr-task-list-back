@@ -8,6 +8,10 @@ Neste projeto foi implementada uma REST API que realiza C.R.U.D. em um banco de 
 
 `JavaScript` `Node.js` `express` `MongoDB` `dotenv` `joi` `jsonwebtoken` `http-status-codes` `nodemon`
 
+# Endpoints
+
+[ descupe, essa seção está em construção! ]
+
 # Como rodar o projeto na sua máquina
 
 Abra o seu Visual Studio Code e aperte ctrl + J ou abra um terminal e siga as instruções a seguir.
