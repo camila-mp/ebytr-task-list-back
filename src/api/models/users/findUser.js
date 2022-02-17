@@ -1,5 +1,5 @@
 const { connection } = require('../connection');
-// this function is used in: createUser (service) and login (service)
+// this function is used as model in: createUser (service) and login (service)
 
 const findUser = async (data) => {
   const user = await (await connection()).collection('users')
