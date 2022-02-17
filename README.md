@@ -28,7 +28,7 @@ Abra o seu Visual Studio Code e aperte ctrl + J ou abra um terminal e siga as in
 4. Inicialize o servidor da API localmente com o comando:
 `npm start` ou `yarn start`
 
-5. Caso você não tenha o mongoDB instalado na sua máquina, instale-o seguindo as instruções deste <a href="https://insomnia.rest/download">link.</a> Com o mongoDB instalado na sua máquina, ative-o com o comando abaixo:
+5. Caso você não tenha o mongoDB instalado na sua máquina, instale-o seguindo as instruções deste <a href="https://insomnia.rest/download">link.</a> Com o mongoDB instalado na sua máquina, ative-o com o comando:
 `sudo service mongod start`
 
 6. Abra ou instale o software Insomnia, ou outro de sua preferência, para testar os endpoints.
