@@ -15,12 +15,13 @@ const genToken = (data) => jwt.sign({ data }, API_SECRET, JWT_CONFIG);
 const validateToken = async (token) => {
   try {
     const decoded = jwt.verify(token, API_SECRET);
-    const { email, password } = decoded.data;
+    const { email } = decoded.data;
 
-    const user = await findUser({ email, password });
+    const user = await findUser({ email });
 
     if (user) {
-      return user;
+      const { _id } = user;
+      return _id;
     }
 
     return false;
