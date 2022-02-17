@@ -2,7 +2,7 @@
 
 # Sobre
 
-Neste projeto foi implementada uma REST API que realiza C.R.U.D. em um banco de dados que armazena listas de tarefas de diferentes usuários. Cada usuário deve passar por um cadastro e em seguida login, etapa na qual é gerado um token de autenticação. Cada usuário tem acesso apenas às suas tarefas, e deve estar autenticado para realizar as operações de criar, ler, editar ou deletar tarefas.
+Neste projeto foi implementada uma REST API que realiza C.R.U.D. em um banco de dados que armazena listas de tarefas. Cada usuário deve passar por um cadastro e em seguida login, etapa na qual é gerado um token de autenticação. Cada usuário tem acesso apenas às suas tarefas, e deve estar autenticado para realizar as operações de criar, ler, editar ou deletar tarefas.
 
 # Tecnologias utilizadas
 
