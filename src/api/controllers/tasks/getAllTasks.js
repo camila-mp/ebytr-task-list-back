@@ -1,13 +1,13 @@
 const { StatusCodes } = require('http-status-codes');
-const createNewTask = require('../../services/lists/createTask');
+const getAllTasks = require('../../services/tasks/getAllTasks');
 
 module.exports = async (req, res, next) => {
   const { userId } = req;
-  const taskData = req.body;
-  
+
   try {
-    const newTask = await createNewTask(userId, taskData);
-    return res.status(StatusCodes.OK).json(newTask);
+    const allTasks = await getAllTasks(userId);
+
+    return res.status(StatusCodes.OK).json(allTasks);
   } catch (err) {
     err.message = 'Internal server error';
     err.code = StatusCodes.INTERNAL_SERVER_ERROR;

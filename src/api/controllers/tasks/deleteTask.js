@@ -1,4 +1,4 @@
-const deleteTaskService = require('../../services/lists/deleteTask');
+const deleteTaskService = require('../../services/tasks/deleteTask');
 const { StatusCodes } = require('http-status-codes');
 
 module.exports = async (req, res, next) => {

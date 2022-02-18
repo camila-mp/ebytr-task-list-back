@@ -1,5 +1,5 @@
 const { StatusCodes } = require('http-status-codes');
-const updateService = require('../../services/lists/updateTaskStatus');
+const updateService = require('../../services/tasks/updateTaskStatus');
 
 module.exports = async (req, res, next) => {
   const { status } = req.body;
