@@ -5,7 +5,7 @@ const { StatusCodes } = require('http-status-codes');
 
 module.exports = async (email, password) => {
   if (!email || !password) {
-    return { message: 'All fields must be filled.', code: StatusCodes.UNAUTHORIZED };
+    return {  code: StatusCodes.UNAUTHORIZED, message: 'All fields must be filled.' };
   }
 
   const emailValidation = emailVal(email);
@@ -14,7 +14,7 @@ module.exports = async (email, password) => {
   const validateUser = await findUser({ email, password });
 
   if (!validateUser) {
-    return { message: 'Sorry, incorrect username or password.', code: StatusCodes.UNAUTHORIZED };
+    return { code: StatusCodes.UNAUTHORIZED, message: 'Sorry, incorrect username or password.' };
   }
   return validateUser;
 }
