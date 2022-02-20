@@ -1,6 +1,13 @@
 const updateTaskModel = require('../../models/tasks/updateTask');
+const { StatusCodes } = require('http-status-codes');
 
-module.exports = async (id, editedData) => {
-  const updateStatus = await updateTaskModel(id, editedData);
-  return updateStatus;
+module.exports = async (id, taskData) => {
+  const updateTask = await updateTaskModel(id, taskData);
+
+  if (updateTask.modifiedCount === 0) {
+    return { code: StatusCodes.NOT_FOUND, message: 'Sorry, no task with the provided id was found.' }
+  } else if (updateTask.modifiedCount > 0) {
+    return { code: StatusCodes.OK, message: 'Task was successfully modified.'}
+  }
+  return updateTask;
 };
