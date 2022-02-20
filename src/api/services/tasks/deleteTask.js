@@ -5,8 +5,8 @@ module.exports = async (id) => {
   const deleteTask = await deleteTaskModel(id);
 
   if (deleteTask.deletedCount === 0) {
-    return { message: 'Sorry, task wasn\'t found.'}
+    return { code: StatusCodes.NOT_FOUND, message: 'Sorry, no task with the provided id was found.' }
   } else if (deleteTask.deletedCount > 0) {
-    return { message: 'Task was successfully deleted.'}
+    return { code: StatusCodes.OK, message: 'Task was successfully deleted.'}
   }
 };

@@ -7,6 +7,10 @@ module.exports = async (req, res, next) => {
   try {
     const deleteTask = await deleteTaskService(id);
 
+    if (deleteTask.message) {
+      return next(deleteTask);
+    }
+
     return res.status(StatusCodes.OK).json(deleteTask);
   } catch (err) {
     err.message = 'Internal server error';
