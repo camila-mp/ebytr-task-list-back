@@ -1,12 +1,12 @@
 const { StatusCodes } = require('http-status-codes');
-const updateService = require('../../services/tasks/updateTaskStatus');
+const updateService = require('../../services/tasks/updateTask');
 
 module.exports = async (req, res, next) => {
-  const { status } = req.body;
+  const { editedData } = req.body;
   const { id } = req.params;
 
   try {
-    const updateTaskStatus = await updateService(id, status);
+    const updateTaskStatus = await updateService(id, editedData);
 
     return res.status(StatusCodes.OK).json(updateTaskStatus);
   } catch (err) {
