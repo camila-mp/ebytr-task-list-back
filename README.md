@@ -1,5 +1,8 @@
 # Boas vindas ao repositório do projeto Ebytr Task List (Backend)!
 
+** Alguns detalhes deste projeto ainda estão em fase de melhoria/construção **
+** Front-End deste projeto ainda está em construção **
+
 # Sobre
 
 Neste projeto foi implementada uma REST API que realiza C.R.U.D. em um banco de dados que armazena listas de tarefas. A arquitetura seguiu o modelo MSC. Cada usuário deve passar por um cadastro e em seguida login, etapa na qual é gerado um token de autenticação. Cada usuário tem acesso apenas às suas tarefas, e deve estar autenticado para realizar as operações de criar, ler, editar ou deletar tarefas. Os dados são armazenados em duas collections: `users` e `tasks`.
