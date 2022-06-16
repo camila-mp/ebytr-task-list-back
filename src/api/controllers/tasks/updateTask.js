@@ -4,9 +4,10 @@ const updateService = require('../../services/tasks/updateTask');
 module.exports = async (req, res, next) => {
   const taskData = req.body;
   const { id } = req.params;
+  const { userId } = req;
 
   try {
-    const updateTask = await updateService(id, taskData);
+    const updateTask = await updateService(id, taskData, userId);
     if (updateTask.message) {
       return next(updateTask)
     }
