@@ -8,11 +8,15 @@ module.exports = async (req, res, next) => {
 
   try {
     const updateTask = await updateService(id, taskData, userId);
-    if (updateTask.message) {
-      return next(updateTask)
+    if (!updateTask) {
+      const err = { 
+        code: StatusCodes.UNAUTHORIZED,
+        message: 'Sorry, you are not allowed to read this task because you are not the author.'
+      }
+      return next(err);
     }
 
-    return res.status(StatusCodes.OK).json(updateTaskStatus);
+    return res.status(StatusCodes.OK).json(updateTask);
   } catch (err) {
     err.message = 'Internal server error';
     err.code = StatusCodes.INTERNAL_SERVER_ERROR;
