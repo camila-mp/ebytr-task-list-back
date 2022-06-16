@@ -6,6 +6,6 @@ module.exports = async (userId, taskData) => {
   if (!description || !status || !dateCreated || !deadline) {
     return { code: StatusCodes.BAD_REQUEST, message: 'Sorry, all task fields are required.' }
   }
-  const listWithNewTask = await createTaskModel(userId, taskData);
-  return listWithNewTask;
+  const newTask = await createTaskModel(userId, taskData);
+  return newTask;
 };
