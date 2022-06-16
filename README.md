@@ -1,4 +1,7 @@
-# Boas vindas ao repositório do projeto Ebytr Task List (Backend)!
+# Boas vindas ao repositório do projeto Task List (Backend)!
+
+** Alguns detalhes deste projeto ainda estão em fase de melhoria/construção ** <br />
+** Front-End deste projeto ainda está em construção **
 
 # Sobre
 
