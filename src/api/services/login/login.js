@@ -1,5 +1,5 @@
 const findUser = require('../../models/users/findUser');
-const emailVal = require('../../utils/validateEmailFunction')
+const emailValidator = require('../../utils/validateEmailFunction')
 const { StatusCodes } = require('http-status-codes');
 
 
@@ -8,8 +8,8 @@ module.exports = async (email, password) => {
     return {  code: StatusCodes.UNAUTHORIZED, message: 'All fields must be filled.' };
   }
 
-  const emailValidation = emailVal(email);
-  if (emailValidation.message) return emailValidation;
+  const emailValidation = emailValidator(email);
+  if (!emailValidation) return { message: 'Invalid e-mail.', code: StatusCodes.UNAUTHORIZED};
 
   const validateUser = await findUser({ email, password });
 
