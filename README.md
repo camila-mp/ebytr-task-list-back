@@ -167,10 +167,10 @@ Ter instalado o MongoDB e algum cliente HTTP (como o Insomnia).
 Abra o seu Visual Studio Code e aperte ctrl + J ou abra um terminal e siga as instruções a seguir.
 
 1. Clone o repositório com o comando:
-`git clone git@github.com:camila-mp/ebytr-task-list-back.git`
+`git clone https://github.com/camila-mp/task-list-backend.git`
 
 2. Entre na pasta clonada com o comando:
-`cd ebytr-task-list-back`
+`cd task-list-backend`
 
 3. Instale as dependências com o comando:
 `npm install` ou `yarn install`
