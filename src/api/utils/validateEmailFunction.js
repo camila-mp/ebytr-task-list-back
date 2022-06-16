@@ -9,7 +9,7 @@ module.exports = (email) => {
     .validate({ email });
   
   if (validateEmailFormat.error) {
-    return { message: 'Invalid e-mail.', code: StatusCodes.UNAUTHORIZED};
+    return false;
   }
   return true;
 };
