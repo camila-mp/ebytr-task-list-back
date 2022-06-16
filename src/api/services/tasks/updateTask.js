@@ -1,7 +1,7 @@
 const updateTaskModel = require('../../models/tasks/updateTask');
 const { StatusCodes } = require('http-status-codes');
 
-module.exports = async (id, taskData) => {
+module.exports = async (id, taskData, userId) => {
   const updateTask = await updateTaskModel(id, taskData);
 
   if (updateTask.modifiedCount === 0) {
